@@ -22,3 +22,12 @@ checkPattern $lastName $pattern;
 read -p "Enter a Email id: " emailId;
 pattern="^[0-9a-zA-Z]+([._+-][0-9a-zA-Z]+)*@[0-9a-zA-Z]+.[a-zA-Z]{2,4}([.][a-zA-Z]{2,3})?$"
 checkPattern $emailId $pattern;
+
+read -p "Enter Mobile Number: " mobileNumber;
+mobilePattern="^([0-9]{2}[ ])?([1-9]{1}[0-9]{9})$"
+if [[ $mobileNumber =~ $mobilePattern ]]
+then
+        echo "Valid";
+else
+        echo "Not Valid";
+fi
