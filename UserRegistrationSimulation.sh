@@ -31,3 +31,7 @@ then
 else
         echo "Not Valid";
 fi
+
+read -p "Enter the Password:" password;
+rule1=[a-zA-Z0-9]{8}
+checkPattern $password $rule1;
