@@ -33,5 +33,5 @@ else
 fi
 
 read -p "Enter the Password:" password;
-rule1=[a-zA-Z0-9]{8}
-checkPattern $password $rule1;
+rule2="[a-zA-Z0-9]{7}[A-Z]{1}([a-zA-Z0-9]*)?"
+checkPattern $password $rule2;
