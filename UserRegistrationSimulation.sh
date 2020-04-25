@@ -33,5 +33,12 @@ else
 fi
 
 read -p "Enter the Password:" password;
-rule2="[a-zA-Z0-9]{7}[A-Z]{1}([a-zA-Z0-9]*)?"
-checkPattern $password $rule2;
+rule1=[a-z]+
+rule2=[A-Z]+
+rule3=[0-9]+
+if [[ $password =~ $rule1 && $password =~ $rule2 && $password =~ $rule3 && ${#password} -gt "7" ]]
+then
+        echo "Valid";
+else
+        echo "Not Valid";
+fi
