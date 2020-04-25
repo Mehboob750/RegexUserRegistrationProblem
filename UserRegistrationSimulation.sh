@@ -15,6 +15,10 @@ read -p "Enter a First Name: " firstName;
 pattern='^[A-Z][a-z]{2,}$'
 checkPattern $firstName $pattern;
 
-read -p "Enter a First Name: " lastName;
+read -p "Enter a Last Name: " lastName;
 pattern='^[A-Z][a-z]{2,}$'
 checkPattern $lastName $pattern;
+
+read -p "Enter a Email id: " emailId;
+pattern="^[0-9a-zA-Z]+([._+-][0-9a-zA-Z]+)*@[0-9a-zA-Z]+.[a-zA-Z]{2,4}([.][a-zA-Z]{2,3})?$"
+checkPattern $emailId $pattern;
