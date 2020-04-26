@@ -36,9 +36,13 @@ read -p "Enter the Password:" password;
 rule1=[a-z]+
 rule2=[A-Z]+
 rule3=[0-9]+
-if [[ $password =~ $rule1 && $password =~ $rule2 && $password =~ $rule3 && ${#password} -gt "7" ]]
+rule4="[@$#!?&%]{1}+"
+if [[ $password =~ $rule4 && $password =~ $rule1 && $password =~ $rule2 && $password =~ $rule3 && ${#password} -gt "7" ]]
 then
-        echo "Valid";
-else
-        echo "Not Valid";
+        if [[ $password =~ $rule4 ]]
+	then
+		echo "Valid";
+	else
+        	echo "Not Valid";
+	fi
 fi
